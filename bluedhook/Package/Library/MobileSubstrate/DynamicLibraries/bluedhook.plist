@@ -7,6 +7,8 @@
 		<key>Bundles</key>
 		<array>
 			<string>com.bluecity.blued</string>
+			<string>com.danlan.xiaolan</string>
+			<string>com.blued.international</string>
 		</array>
 	</dict>
 </dict>

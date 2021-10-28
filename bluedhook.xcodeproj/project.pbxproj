@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		B75F5FB627205E9F006FD654 /* GJIMDBService.h in Headers */ = {isa = PBXBuildFile; fileRef = B75F5FB527205E9F006FD654 /* GJIMDBService.h */; };
 		B75F5FB827205FBF006FD654 /* GJIMSessionToken.h in Headers */ = {isa = PBXBuildFile; fileRef = B75F5FB727205FBF006FD654 /* GJIMSessionToken.h */; };
+		B75F5FBA2729EE11006FD654 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75F5FB92729EE11006FD654 /* UserNotifications.framework */; };
+		B75F6062272A3915006FD654 /* FJDeepSleepPreventerPlus.h in Headers */ = {isa = PBXBuildFile; fileRef = B75F6060272A3915006FD654 /* FJDeepSleepPreventerPlus.h */; };
+		B75F606B272A3B97006FD654 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75F6069272A3B97006FD654 /* AVFoundation.framework */; };
+		B75F606C272A3B97006FD654 /* AVFAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75F606A272A3B97006FD654 /* AVFAudio.framework */; };
+		B78DCB42272AE53400ED117D /* FJDeepSleepPreventerPlus.m in Sources */ = {isa = PBXBuildFile; fileRef = B75F6061272A3915006FD654 /* FJDeepSleepPreventerPlus.m */; };
 		B7A1D81C271F272A00642CA3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A1D81B271F272A00642CA3 /* Foundation.framework */; };
 		B7A1D824271F272A00642CA3 /* bluedhook.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7A1D823271F272A00642CA3 /* bluedhook.mm */; };
 		B7A1D82F271F27B600642CA3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A1D82E271F27B600642CA3 /* UIKit.framework */; };
@@ -25,6 +30,11 @@
 /* Begin PBXFileReference section */
 		B75F5FB527205E9F006FD654 /* GJIMDBService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJIMDBService.h; sourceTree = "<group>"; };
 		B75F5FB727205FBF006FD654 /* GJIMSessionToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJIMSessionToken.h; sourceTree = "<group>"; };
+		B75F5FB92729EE11006FD654 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/UserNotifications.framework; sourceTree = DEVELOPER_DIR; };
+		B75F6060272A3915006FD654 /* FJDeepSleepPreventerPlus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJDeepSleepPreventerPlus.h; sourceTree = "<group>"; };
+		B75F6061272A3915006FD654 /* FJDeepSleepPreventerPlus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJDeepSleepPreventerPlus.m; sourceTree = "<group>"; };
+		B75F6069272A3B97006FD654 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		B75F606A272A3B97006FD654 /* AVFAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFAudio.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/AVFAudio.framework; sourceTree = DEVELOPER_DIR; };
 		B7862CAE271FE7100081C061 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B7A1D818271F272A00642CA3 /* bluedhook.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = bluedhook.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7A1D81B271F272A00642CA3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -48,7 +58,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B75F606B272A3B97006FD654 /* AVFoundation.framework in Frameworks */,
+				B75F606C272A3B97006FD654 /* AVFAudio.framework in Frameworks */,
 				B7A1D82F271F27B600642CA3 /* UIKit.framework in Frameworks */,
+				B75F5FBA2729EE11006FD654 /* UserNotifications.framework in Frameworks */,
 				B7A1D81C271F272A00642CA3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,6 +90,9 @@
 		B7A1D81A271F272A00642CA3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B75F606A272A3B97006FD654 /* AVFAudio.framework */,
+				B75F6069272A3B97006FD654 /* AVFoundation.framework */,
+				B75F5FB92729EE11006FD654 /* UserNotifications.framework */,
 				B7A1D82E271F27B600642CA3 /* UIKit.framework */,
 				B7A1D81B271F272A00642CA3 /* Foundation.framework */,
 			);
@@ -97,6 +113,8 @@
 				B7A1D838271F292300642CA3 /* GJIMSessionService.h */,
 				B75F5FB727205FBF006FD654 /* GJIMSessionToken.h */,
 				B7A1D823271F272A00642CA3 /* bluedhook.mm */,
+				B75F6060272A3915006FD654 /* FJDeepSleepPreventerPlus.h */,
+				B75F6061272A3915006FD654 /* FJDeepSleepPreventerPlus.m */,
 				B7A1D81E271F272A00642CA3 /* Package */,
 				B7A1D821271F272A00642CA3 /* Supporting Files */,
 			);
@@ -161,6 +179,7 @@
 			files = (
 				B7A1D83B271F293000642CA3 /* GJIMBaseModel.h in Headers */,
 				B7A1D835271F287600642CA3 /* GJIMMessageModel.h in Headers */,
+				B75F6062272A3915006FD654 /* FJDeepSleepPreventerPlus.h in Headers */,
 				B7A1D832271F283C00642CA3 /* BasePackage.h in Headers */,
 				B7A1D833271F283C00642CA3 /* PushPackage.h in Headers */,
 				B75F5FB827205FBF006FD654 /* GJIMSessionToken.h in Headers */,
@@ -250,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7A1D824271F272A00642CA3 /* bluedhook.mm in Sources */,
+				B78DCB42272AE53400ED117D /* FJDeepSleepPreventerPlus.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
