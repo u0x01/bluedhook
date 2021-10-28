@@ -14,8 +14,10 @@
 // 3: 语音消息
 // 5: 视频
 // 6: 大表情
+// 22: 来访消息
 // 24: 闪照
 // 25: 闪频
+// 74: 解锁相册
 
 #if TARGET_OS_SIMULATOR
 #error Do not support the simulator, please use the real iPhone Device.
@@ -121,6 +123,12 @@ CHOptimizedMethod1(self, id, GJIMSessionService, p_handlePushPackage, PushPackag
             pkg.contents = [objc_getClass("BDEncrypt") decryptVideoUrl:pkg.contents];
             pkg.msgExtra = @{@"BLUEDHOOK_IS_SNAPIMG": @1};
             break;
+//        case 0:
+//            break;
+//        case 1:
+//            break;
+//        case 74:
+//            break;
         case 2:
             pushContent = @"[图片]";
             break;
@@ -133,8 +141,12 @@ CHOptimizedMethod1(self, id, GJIMSessionService, p_handlePushPackage, PushPackag
         case 6:
             pushContent = @"给你发了一个表情";
             break;
-        default:
+        case 22:
+            pushContent = @"刚刚访问了你的主页";
             break;
+//        default:
+//            pushContent = [NSString stringWithFormat:@"%llu:%@", pkg.messageType, pkg.contents];
+//            break;
     }
     
     
@@ -145,7 +157,7 @@ CHOptimizedMethod1(self, id, GJIMSessionService, p_handlePushPackage, PushPackag
     // 判断是否在前台决定是否推送
     if ([UIApplication sharedApplication].applicationState == UIApplicationStateActive) {
         [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
-    } else {
+    } else if (pushContent != nil) {
         [UIApplication sharedApplication].applicationIconBadgeNumber += 1;
         UNMutableNotificationContent *content = [UNMutableNotificationContent new];
         content.title = pkg.name;
